@@ -1,0 +1,262 @@
+/* 基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 頁首樣式 */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* 添加過渡效果 */
+}
+
+header nav ul li a:hover {
+    color: #ffcc00; /* 當滑鼠懸停時，文字顏色變為金黃色 */
+    text-decoration: underline; /* 加入下劃線效果 */
+}
+
+
+
+
+/* 主視覺區域（加入跑車背景） */
+.hero {
+    text-align: center;
+    background-image: url('../image/background5.jpg'); /* 跑車背景圖 */
+    background-size: contain; /* 使背景圖片覆蓋整個區域 */
+    background-position: center; /* 圖片居中 */
+    padding: 150px 0; /* 調整 padding，讓背景圖片顯示得更好 */
+    color: white;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.hero a {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* 商品區域 */
+.products {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* 使商品卡片在小螢幕上自動換行 */
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 增加平滑過渡效果 */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* 放大效果 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 增強陰影 */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* 使圖片縮放過渡效果 */
+}
+
+.product-card img:hover {
+    transform: scale(1.1); /* 圖片放大效果 */
+}
+
+/* 按鈕樣式 */
+button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* 平滑顏色過渡 */
+}
+
+button:hover {
+    background-color: #e6b800; /* 按鈕顏色變化 */
+}
+
+/* 購物車區域樣式 */
+#cart {
+    display: none;
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* 購物車標題 */
+#cart h3 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* 購物車商品清單 */
+#cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#cart ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#cart ul li button {
+    background-color: #ff6666;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#cart ul li button:hover {
+    background-color: #e60000;
+}
+
+/* 總價顯示 */
+#cart ul li.total {
+    font-weight: bold;
+    color: #333;
+    padding-top: 10px;
+    border-top: 2px solid #ccc;
+    margin-top: 10px;
+}
+
+/* 結帳按鈕 */
+#cart button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#cart button:hover {
+    background-color: #e6b800;
+}
+
+/* 購物車顯示的過渡動畫 */
+#cart.show {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#cart.hide {
+    display: none;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+
+
+
+/* 頁腳樣式 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px; /* 增加與內容區域的間距 */
+}
+
+/* 響應式設計：在較小的螢幕上調整樣式 */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* 導航欄項目堆疊 */
+    }
+
+    .hero h1 {
+        font-size: 28px; /* 在小螢幕上縮小字體大小 */
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .product-list {
+        flex-direction: column; /* 商品卡片堆疊 */
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%; /* 在小螢幕上調整商品卡片的寬度 */
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晴空町</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- 導航欄 -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">商品分類</a></li>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">登入/註冊</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主視覺區 -->
+    <section class="hero">
+        <h1>歡迎來到我們的購物網站</h1>
+        <p>在這裡尋找您需要的商品，享受優惠折扣！</p>
+        <a href="#">立即購買</a>
+    </section>
+
+    <!-- 商品推薦 -->
+    <section class="products">
+        <h2>推薦商品</h2>
+        <div class="product-list">
+            <!--第一個產品-->
+            <div class="product-card">
+                <img src="image/car1.jpg" alt="商品1">
+                <h3>跑車1</h3>
+                <p>價格: $900000</p>
+                <button onclick="addToCart('商品1', 900000)">加入購物車</button>
+            </div>
+            <!--第二個產品-->
+            <div class="product-card">
+                <img src="image/car2.jpg" alt="商品2">
+                <h3>跑車2</h3>
+                <p>價格: $ 1500000</p>
+                <button onclick="addToCart('商品2', 1500000)">加入購物車</button>
+            </div>    
+             <!--第三個產品-->
+             <div class="product-card">
+                <img src="image/car3.jpg" alt="商品2">
+                <h3>跑車3</h3>
+                <p>價格: $3000000</p>
+                <button onclick="addToCart('商品2', 3000000)">加入購物車</button>
+            </div>
+            <!--第四個產品-->
+            <div class="product-card">
+                <img src="image/car4.jpg" alt="商品2">
+                <h3>跑車4</h3>
+                <p>價格: $6000000</p>
+                <button onclick="addToCart('商品2', 6000000)">加入購物車</button>
+            </div>
+            
+                  
+        </div>
+    </section>
+            <!-- 購物車按鈕 -->
+            <footer>
+                <button onclick="toggleCart()">查看購物車</button>
+            </footer>
+
+            <!-- 購物車顯示區 -->
+            <div id="cart">
+                <h3>購物車</h3>
+                <ul id="cart-items"></ul>
+                <button onclick="checkout()">結帳</button>
+            </div>
+
+            <script>
+                let cart = [];
+
+                function addToCart(productName, productPrice) {
+                    // 將商品加入購物車
+                    cart.push({ name: productName, price: productPrice });
+                    alert(`${productName} 已加入購物車!`);
+                    updateCartDisplay();
+                }
+
+                function updateCartDisplay() {
+                    // 更新購物車顯示
+                    const cartItemsList = document.getElementById('cart-items');
+                    cartItemsList.innerHTML = ''; // 清空現有項目
+                    let total = 0;
+
+                    cart.forEach((item, index) => {
+                        const li = document.createElement('li');
+                        li.textContent = `${item.name} - $${item.price}`;
+                        const removeBtn = document.createElement('button');
+                        removeBtn.textContent = '刪除';
+                        removeBtn.onclick = () => removeFromCart(index);
+                        li.appendChild(removeBtn);
+                        cartItemsList.appendChild(li);
+                        total += item.price;
+                    });
+
+                    // 顯示總價
+                    if (cart.length > 0) {
+                        const totalPrice = document.createElement('li');
+                        totalPrice.textContent = `總計: $${total}`;
+                        cartItemsList.appendChild(totalPrice);
+                    }
+                }
+
+                function removeFromCart(index) {
+                    // 刪除購物車中的商品
+                    cart.splice(index, 1);
+                    updateCartDisplay();
+                }
+
+                function toggleCart() {
+                    const cartDiv = document.getElementById('cart');
+                    cartDiv.style.display = cartDiv.style.display === 'block' ? 'none' : 'block';
+                    updateCartDisplay(); // 更新購物車內容
+                }
+
+                function checkout() {
+                    alert('結帳功能尚未實現！');
+                }
+</script>
+</body>
+</html>
