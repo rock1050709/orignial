@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本然の善</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!--CSS連結-->
+        <link rel="stylesheet" href="roomlist.css">
+
+    
+ <!-- 頁首 -->
+ <header>
+    <a href="#" class="logo">
+      <img src="../image/logo2.png" alt="大管家 Logo">
+      <span>本然の善</span>
+    </a>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <a href="#home">首頁</a>
+      <a href="#category">關於大管家</a>
+      <a href="#menu">最新消息</a>
+      <a href="#gallery">房屋租客</a>
+      <a href="#order">房東出租</a>
+      <a href="#service">社會住宅包租代管</a>
+      <a href="#service">聯絡我們</a>
+      <div class="search-box">
+        <input type="text" placeholder="搜尋關鍵字...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <script>
+    document.getElementById('menu-bar').onclick = function () {
+      this.classList.toggle('fa-times');
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+</script>
+
+<!--第二區房屋照片-->
+
+<a href="house-detail.html?id=551122" class="listing-card" data-id="551122">
+  <article>
+    <section class="listing-images">
+      <img src="../image/room1.jpg" alt="房屋照片" loading="lazy",class="zoomable">
+      <img src="../image/room2.jpg" alt="房屋照片" loading="lazy",class="zoomable">
+      <img src="../image/room3.jpg" alt="房屋照片" loading="lazy",class="zoomable">
+      <img src="../image/room4.jpg" alt="房屋照片" loading="lazy",class="zoomable">
+      <img src="../image/room5.jpg" alt="房屋照片" loading="lazy",class="zoomable">
+      <img src="../image/room6.jpg" alt="房屋照片" loading="lazy",class="zoomable">
+      <div class="more-photos">查看更多 7 張照片</div>
+    </section>
+
+    <div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  </div>
+
+    <section class="listing-info">
+      <h2>💙 近高鐵電梯套房 💙 衛浴乾濕分離 💙 室內機車位 💙</h2>
+
+      <div class="listing-tags">
+        <span class="tag new">新上架</span>
+        <span class="tag near">近商圈</span>
+        <span class="tag">有電梯</span>
+        <span class="tag">隨時可遷入</span>
+        <span class="tag">可開伙</span>
+        <span class="tag">有車位</span>
+      </div>
+
+      <div class="listing-detail">
+        <span>獨立套房</span> ・
+        <span>8坪</span> ・
+        <span>4F / 8F</span> ・
+        <span>電梯大樓</span>
+      </div>
+
+      <div class="listing-price">
+        <strong class="price">12,000 元 / 月</strong> ・
+        <span class="deposit">押金二個月</span>
+      </div>
+    </section>
+  
+  </article>
+</a>
+
+<!--第三區物件說明-->
+
+<div class="container">
+  <div class="main-content">
+    <h2>位置與周邊</h2>
+    <p><strong>地址：</strong>竹北市光明六路東一段647號</p>
+    <p><strong>所屬社區：</strong><a href="#">竹科潤</a></p>
+
+    <div class="info-boxes">
+      <div class="info-card">
+        <h3>🚉 交通</h3>
+        <ul>
+          <li>距特殊教育學校：151 公尺</li>
+          <li>甲高鐵新竹站：886 公尺</li>
+          <li>甲自強南路[快捷]站：937 公尺</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>🍲 生活</h3>
+        <ul>
+          <li>距岩漿火鍋竹北店：70 公尺</li>
+          <li>距全聯福利中心P：465 公尺</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>📚 教育</h3>
+        <ul>
+          <li>距新竹縣竹北市東興國小：320 公尺</li>
+          <li>距新竹縣立東興國中：419 公尺</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>設備與服務</h2>
+    <ul class="facility-list">
+      <li><strong>租住說明：</strong>最短租期一年，可隨時遷入</li>
+      <li><strong>房屋守則：</strong>不可養寵物</li>
+    </ul>
+
+      </div>
+
+  <div class="sidebar">
+    <div class="landlord-contact">
+      <h3>屋主：劉先生（仲介勿擾）</h3>
+      <p>2024年加入591</p>
+      <a href="tel:0972528577" class="phone">📞 0972-528-577 轉 3888893</a>
+      <a href="#" class="line">LINE 聯絡</a>
+    </div>
+  </div>
+</div>
+
+
+
+<!--包含設備-->
+
+<div class="facility-section">
+  <h3>提供設備</h3>
+  <div class="facilities">
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/fridge.png" alt="冰箱">冰箱
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/washing-machine.png" alt="洗衣機">洗衣機
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/tv.png" alt="電視">電視
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/air-conditioner.png" alt="冷氣">冷氣
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/water-heater.png" alt="熱水器">熱水器
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/bed.png" alt="床">床
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/wardrobe.png" alt="衣櫃">衣櫃
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/wifi.png" alt="網路">網路
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/fire-element.png" alt="天然瓦斯">天然瓦斯
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/sofa.png" alt="沙發">沙發
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/desk.png" alt="桌椅">桌椅
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/balcony.png" alt="1陽台">1陽台
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/elevator.png" alt="電梯">電梯
+    </div>
+    <div class="facility">
+      <img src="https://img.icons8.com/ios/30/parking.png" alt="平面車位">平面車位
+    </div>
+  </div>
+</div>
+
+
+<!--屋況說明-->
+<div class="page-wrapper">
+<div class="content-wrapper">
+  <h2>說明</h2>
+  <ul>
+    <li>步行至高鐵站只需三分鐘 / 全新電梯大樓 / 傢俱全可立即拎包入住</li>
+    <li>社區: 竹科滙 (竹北高鐵區)</li>
+    <li>格局: 2房2廳1衛1陽台</li>
+    <li>月租：29,000</li>
+    <li>其他費用: 台水、台電、瓦斯、管理費(約2500/月)、若有平面車位需求另談</li>
+  </ul>
+
+  <h2>特色</h2>
+  <ul class="features">
+    <li>全戶日本三協氣密窗5+5膠合玻璃</li>
+    <li>大金變頻冷暖空調、林內熱水器、淨水器、烘碗機、冰箱、惠爾普洗脫烘三合一</li>
+    <li>附床架 (有床墊需求可加)、衣櫃、書桌、餐桌餐椅、三人大沙發、55吋電視</li>
+    <li>24小時物業管理可代收包裹</li>
+    <li>拎包即可入住!</li>
+  </ul>
+
+  <h2>請注意</h2>
+  <ul class="notice">
+    <li>不可寵 / 不可煙</li>
+    <li>短租一年，長約優先，屋主自租，免仲介服務費!</li>
+    <li>約看前請先加 Line ID: <span class="line-id">0921198490</span> (去掉點)，並簡短描述需求與現職，謝謝!</li>
+  </ul>
+
+  <p>附近有便利商店、百貨公司、公園綠地、學校、醫療機構。</p>
+</div>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
