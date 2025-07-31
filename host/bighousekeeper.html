@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本然の善</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!--CSS連結-->
+        <link rel="stylesheet" href="bighousekeeper.css">
+
+    
+                                        <!-- 頁首 -->
+ <header>
+    <a href="#" class="logo">
+      <img src="../image/logo2.png" alt="大管家 Logo">
+      <span>本然の善</span>
+    </a>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <a href="../host/bighousekeeper.html"><i class="fas fa-home"></i> 首頁</a>
+      <a href="../story/story.html"><i class="fas fa-info-circle"></i> 關於本然の善</a>
+      <a href="../news/new.html"><i class="fas fa-bullhorn"></i> 最新消息</a>
+      <a href="../room/room.html"><i class="fas fa-user-edit"></i> 房東出租</a>
+      <a href="../advertise/advertise.html"><i class="fas fa-building"></i> 社會住宅包租代管</a>
+      <a href="../contant/contant.html"><i class="fas fa-envelope"></i> 聯絡我們</a>
+      <div class="search-box">
+        <input type="text" placeholder="搜尋關鍵字...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <script>
+    document.getElementById('menu-bar').onclick = function () {
+      this.classList.toggle('fa-times');
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+  </script>
+
+ <!-- 背景影片 + 內容 -->
+
+ <section class="home" id="home">
+  <!-- 背景影片 -->
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="../image/movie.mp4" type="video/mp4">
+    你的瀏覽器不支援影片播放
+  </video>
+
+  <!-- 前景內容 -->
+  <div class="content">
+  <div class="text-area">
+    <h3>包租代管安心好選擇</h3>
+
+    <div class="box-container">
+      <a href="../room/room.html" class="box">
+        <i class="fas fa-home"></i>
+        <h4>租屋資訊</h4>
+        <p>快速找到理想租屋，輕鬆又省心。</p>
+      </a>
+
+      <a href="../advertise/advertise.html" class="box">
+        <i class="fas fa-handshake"></i>
+        <h4>代管服務</h4>
+        <p>全方位管理房屋，專業可靠。</p>
+      </a>
+
+      <a href="../news/new.html" class="box">
+        <i class="fas fa-user-shield"></i>
+        <h4>最新消息</h4>
+        <p>讓你掌握第一手消息。</p>
+      </a>
+
+      <a href="../contant/contant.html" class="box">
+        <i class="fas fa-phone-alt"></i>
+        <h4>聯絡我們</h4>
+        <p>快速聯繫，立即諮詢服務。</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <div class="image-area">
+      <img src="../image/girl5.png" alt="招牌圖片" class="content-image">
+    </div>
+  </div>
+</section>
+
+
+
+
+                                      <!--熱門物件推薦-->
+
+<section class="popular" id="popular">
+  <h2 class="section-title">熱門推薦</h2>
+
+  <!-- 套房 -->
+<div class="category-group">
+  <h3 class="category-title">套房</h3>
+  <div class="scroll-wrapper">
+    <button class="scroll-btn left" data-target="suite"><i class="fas fa-chevron-left"></i></button>
+    <div class="scroll-container" id="suite">
+
+      <a href="../roomlist/roomlist.html" class="box">
+        <img src="../image/room1.jpg">
+        <h4>明星科大兩房</h4>
+        <p>新豐鄉 / 新庄子</p>
+        <h3>$8500</h3>
+      </a>
+
+      <a href="/roomlist/house-detail.html?id=551123" class="box">
+        <img src="../image/room2.jpg">
+        <h4>市中心套房</h4>
+        <p>竹北市 / 興隆路</p>
+        <h3>$15000</h3>
+      </a>
+
+      <a href="roomlist/house-detail.html?id=551124" class="box">
+        <img src="../image/room3.jpg">
+        <h4>景觀宅</h4>
+        <p>竹北市 / 中華路</p>
+        <h3>$26000</h3>
+      </a>
+
+      <a href="roomlist/house-detail.html?id=551125" class="box">
+        <img src="../image/room4.jpg">
+        <h4>溫馨小宅</h4>
+        <p>湖口鄉 / 華興街</p>
+        <h3>$13000</h3>
+      </a>
+
+      <a href="roomlist/house-detail.html?id=551126" class="box">
+        <img src="../image/room5.jpg">
+        <h4>親子宅</h4>
+        <p>湖口鄉 / 博愛路</p>
+        <h3>$16000</h3>
+      </a>
+
+      <a href="roomlist/house-detail.html?id=551127" class="box">
+        <img src="../image/room6.jpg">
+        <h4>郊區別墅</h4>
+        <p>竹北市 / 隘口一路</p>
+        <h3>$26000</h3>
+      </a>
+
+      <a href="roomlist/house-detail.html?id=551128" class="box">
+        <img src="../image/room7.jpg">
+        <h4>偏鄉透天</h4>
+        <p>竹東鄉 / 華興路</p>
+        <h3>$15000</h3>
+      </a>
+
+    </div>
+    <button class="scroll-btn right" data-target="suite"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</div>
+
+  <!-- 辦公室 -->
+  <div class="category-group">
+    <h3 class="category-title">辦公室</h3>
+    <div class="scroll-wrapper">
+      <button class="scroll-btn left" data-target="shop"><i class="fas fa-chevron-left"></i></button>
+      <div class="scroll-container" id="shop">
+        <div class="box"><img src="../image/office1.jpg"><h4>現代辦公室</h4><p>湖口鄉 / 華興街</p><h3>$13000</h3></div>
+        <div class="box"><img src="../image/office2.jpg"><h4>市中心精緻辦公室</h4><p>湖口鄉 / 博愛路</p><h3>$16000</h3></div>
+        <div class="box"><img src="../image/office3.jpg"><h4>高端商務辦公室</h4><p>竹北市 / 隘口一路</p><h3>$26000</h3></div>
+        <div class="box"><img src="../image/office4.jpg"><h4>企業型辦公室</h4><p>湖口鄉 / 華興街</p><h3>$13000</h3></div>
+        <div class="box"><img src="../image/office5.jpg"><h4>全新裝修辦公室</h4><p>湖口鄉 / 博愛路</p><h3>$16000</h3></div>
+        <div class="box"><img src="../image/office6.jpg"><h4>共享辦公室</h4><p>竹北市 / 隘口一路</p><h3>$26000</h3></div>
+        <div class="box"><img src="../image/office7.jpg"><h4>交通便利辦公室</h4><p>竹北市 / 隘口一路</p><h3>$26000</h3></div>
+      </div>
+      <button class="scroll-btn right" data-target="shop"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+    <!-- 店面-->
+  <div class="category-group">
+    <h3 class="category-title">店面</h3>
+    <div class="scroll-wrapper">
+      <button class="scroll-btn left" data-target="office"><i class="fas fa-chevron-left"></i></button>
+      <div class="scroll-container" id="office">
+        <div class="box"><img src="../image/sotre1.jpg"><h4>繁華街區商店</h4><p>竹東鄉 / 華興路</p><h3>$15000</h3></div>
+        <div class="box"><img src="../image/sotre2.jpg"><h4>市中心黃金店面</h4><p>新豐鄉 / 新庄子</p><h3>$8500</h3></div>
+        <div class="box"><img src="../image/store3.jpg"><h4>全新裝潢店面，開店首選</h4><p>竹北市 / 興隆路</p><h3>$15000</h3></div>
+        <div class="box"><img src="../image/store4.jpg"><h4>人流密集的商業店面</h4><p>竹東鄉 / 華興路</p><h3>$15000</h3></div>
+        <div class="box"><img src="../image/store5.jpg"><h4>適合創業的靈活店面空間</h4><p>新豐鄉 / 新庄子</p><h3>$8500</h3></div>
+        <div class="box"><img src="../image/sotre6.jpg"><h4>業務拓展好位置店面</h4><p>竹北市 / 興隆路</p><h3>$15000</h3></div>
+        <div class="box"><img src="../image/store7.jpg"><h4>實惠價位，絕佳店面選擇</h4><p>竹北市 / 興隆路</p><h3>$15000</h3></div>
+      </div>
+      <button class="scroll-btn right" data-target="office"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const buttons = document.querySelectorAll('.scroll-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const containerId = btn.getAttribute('data-target');
+      const container = document.getElementById(containerId);
+      const direction = btn.classList.contains('left') ? -300 : 300;
+      container.scrollBy({ left: direction, behavior: 'smooth' });
+    });
+  });
+</script>
+
+
+ 
+
+<script>
+  const scrollBox = document.getElementById('scrollBox');
+  const scrollAmount = 300; // 每次滑動的距離
+
+  document.querySelector('.scroll-btn.left').addEventListener('click', () => {
+    scrollBox.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  document.querySelector('.scroll-btn.right').addEventListener('click', () => {
+    scrollBox.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+</script>
+
+
+
+                                  <!--服務項目 -->
+
+<section class="category" id="category">
+  <h1 class="heading">包租代管<span>服務項目</span></h1>
+  <div class="box-container">
+
+    <!-- 1. 基礎管理方案 -->
+    <div class="box">
+      <img class="image" src="../image/fix.jpg" alt="基礎管理方案">
+      <div class="content">
+        <h3>基礎管理</h3>
+        <hr>
+        <p>提供收租、報修、定期巡檢等基本服務，適合首次包租業主。</p>
+      </div>
+    </div>
+
+    <!-- 2. 全權委託方案 -->
+    <div class="box">
+      <img class="image" src="../image/fix2.jpg" alt="全權委託">
+      <div class="content">
+        <h3>全權委託</h3>
+        <hr>
+        <p>從招租到房務全程包辦，讓業主真正實現零負擔經營。</p>
+      </div>
+    </div>
+
+    <!-- 3. 裝修管理方案 -->
+    <div class="box">
+      <img class="image" src="../image/fix4.jpg" alt="裝修管理">
+      <div class="content">
+        <h3>裝修管理</h3>
+        <hr>
+        <p>提供房屋整修與空間改造建議，提升出租效率與價值。</p>
+      </div>
+    </div>
+
+    <!-- 4. 法律保障方案 -->
+    <div class="box">
+      <img class="image" src="../image/fix3.jpg" alt="法律保障">
+      <div class="content">
+        <h3>法律保障</h3>
+        <hr>
+        <p>提供租賃契約審閱、法律諮詢，降低房東法律風險。</p>
+      </div>
+    </div>
+
+    <!-- 5. 收租保證方案 -->
+    <div class="box">
+      <img class="image" src="../image/fix5.jpg" alt="收租保證">
+      <div class="content">
+        <h3>收租保證</h3>
+        <hr>
+        <p>不怕房客拖欠租金，保障房東每月穩定收益。</p>
+      </div>
+    </div>
+
+    <!-- 6. 短租代管方案 -->
+    <div class="box">
+      <img class="image" src="../image/fix6.jpg" alt="短租代管">
+      <div class="content">
+        <h3>短租代管</h3>
+        <hr>
+        <p>針對 AirBnB 等短期出租市場提供全方位經營與管理。</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+                                      <!-- 人才招募 -->
+<section class="category" id="category">
+  <h1 class="heading">人才招募<span></span></h1>
+  <div class="container">
+
+    <!-- 人才招募 -->
+    <a href="/recruit/job" class="block">
+      <section class="textcenter">
+        <div class="image-container">
+          <img src="../image/local.jpg" alt="人才招募">
+        </div>
+      </section>
+    </a>
+
+    <!-- 加盟專區 -->
+    <a href="https://www.104.com.tw/company/1a2x6bmqtr?jobsource=google"  class="block">
+      <section class="textcenter">
+        <div class="image-container">
+          <img src="../image/local2.jpg" alt="加盟專區">
+        </div>
+      </section>
+    </a>
+
+  </div>
+</section>
+
+
+                                        <!--頁尾 -->
+<section class="footer" id="footer">
+  <div class="footer-content">
+    <div class="company-info">
+      <h2>關於本然の善</h2>
+      <h2>統編: 53540998</h2>
+      <h2>地址: 新竹縣竹北市自強南路43號</h2>
+      <h2>電話: 03-6585588</h2>
+    </div>
+    
+    <div class="social">
+      <h3>追蹤我們</h3>
+      <a href="https://www.facebook.com/share/165cFF5yF3" target="_blank">
+        <i class="fab fa-facebook-square" style="color:blue;font-size: 30;"></i>
+      </a>
+      <a href="https://www.instagram.com/h45066" target="_blank">
+        <i class="fab fa-instagram-square" style="color:rgb(218,122,214);font-size: 30;"></i>
+      </a>
+      <a href="https://line.me/ti/p/0989533556" target="_blank">
+        <i class="fab fa-line" style="color:green;font-size: 30;"></i>
+      </a>
+    </div>
+    
+    <div class="services">
+      <h3>社宅服務</h3>
+      <h4>房東申請修繕補助</h4>
+      <h4>房客申請修繕補助</h4>
+    </div>
+    
+    <div class="news">
+      <h3>好康快報</h3>
+      <h4>最新消息</h4>
+      <h4>活動影片</h4>
+      <h4>聯絡我們</h4>
+    </div>
+  </div>
+</section>
+
+<!--響應式網站 -->
+
+                                        <!-- 社群平台丁選 -->
+ 
+<div class="fixed-widget" id="contactWidget">
+  <button class="close-btn">×</button>
+
+
+  <h3 class="contact-title">聯絡我們</h3>
+  <!-- 美女圖片 -->
+  <img src="../image/service2.png" alt="聯絡代表人物" class="contact-image">
+
+  <!-- 社群圖示 -->
+  <div class="social-links">
+    <a href="https://www.facebook.com/share/165cFF5yF3" target="_blank">
+      <i class="fab fa-facebook-square social-icon" style="color:blue;"></i>
+    </a>
+    <a href="https://www.instagram.com/h45066" target="_blank">
+      <i class="fab fa-instagram-square social-icon" style="color:rgb(218,122,214);"></i>
+    </a>
+    <a href="https://line.me/ti/p/0989533556" target="_blank">
+      <i class="fab fa-line social-icon" style="color:green;"></i>
+    </a>
+  </div>
+</div>
+<script src="../host/bighousekeeper.js"></script>
+
+
+
+
+</body>
+</html>
