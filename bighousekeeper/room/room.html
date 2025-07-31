@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本然の善</title>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!--CSS連結-->
+        <link rel="stylesheet" href="room.css">
+
+    
+ <!-- 頁首 -->
+ <header>
+    <a href="#" class="logo">
+      <img src="../image/logo2.png" alt="大管家 Logo">
+      <span>本然の善</span>
+    </a>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <a href="../host/bighousekeeper.html"><i class="fas fa-home"></i> 首頁</a>
+      <a href="../story/story.html"><i class="fas fa-info-circle"></i> 關於本然の善</a>
+      <a href="../news/new.html"><i class="fas fa-bullhorn"></i> 最新消息</a>
+      <a href="../room/room.html"><i class="fas fa-user-edit"></i> 房東出租</a>
+      <a href="../advertise/advertise.html"><i class="fas fa-building"></i> 社會住宅包租代管</a>
+      <a href="../contant/contant.html"><i class="fas fa-envelope"></i> 聯絡我們</a>
+      <div class="search-box">
+        <input type="text" placeholder="搜尋關鍵字...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <script>
+    document.getElementById('menu-bar').onclick = function () {
+      this.classList.toggle('fa-times');
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+</script>
+
+ <!-- 物件搜尋 -->
+
+
+<script src="../room/room.js"></script> 
+ <div class="search-container">
+  <div class="search-header">
+    <h3 class="logo-title">本然の善</h3>
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="請輸入關鍵字(案名、路段、學校、交通設施等)">
+      <button class="search-btn">點我查詢</button>
+    </div>
+  </div>
+</div>
+
+ 
+   <div class="filter-row">
+  <label for="city-select">位置</label>
+  <select id="city-select" name="city">
+    <option value="">選擇城市</option>
+  </select>
+
+  <select id="town-select" name="town">
+    <option value="">選擇鄉鎮</option>
+  </select>
+</div>
+
+
+
+   <div class="filter-row">
+  <label>類型</label>
+  <button data-type="不限">不限</button>
+  <button data-type="住宅">住宅</button>
+  <button data-type="商辦">商辦</button>
+  <button data-type="土地">土地</button>
+  <button data-type="車位">車位</button>
+  <button data-type="其他">其他</button>
+</div>
+
+<div class="filter-row">
+  <label>&nbsp;</label>
+  <button data-subtype="不限">不限</button>
+  <button data-subtype="電梯大樓">電梯大樓</button>
+  <button data-subtype="電梯華廈">電梯華廈</button>
+  <button data-subtype="公寓">公寓</button>
+  <button data-subtype="透天/別墅">透天/別墅</button>
+  <button data-subtype="套房">套房</button>
+  <button data-subtype="店面/店辦">店面/店辦</button>
+  <button data-subtype="住辦">住辦</button>
+  <button data-subtype="廠辦/工廠">廠辦/工廠</button>
+  <button data-subtype="其他">其他</button>
+</div>
+
+<div class="filter-row">
+  <label>租金</label>
+  <button data-rent="不限">不限</button>
+  <button data-rent="0-5000">5,000元以下</button>
+  <button data-rent="5000-10000">5,000-10,000元</button>
+  <button data-rent="10000-15000">10,000-15,000元</button>
+  <button data-rent="15000-20000">15,000-20,000元</button>
+  <button data-rent="20000-25000">20,000-25,000元</button>
+  <button data-rent="25000-40000">25,000-40,000元</button>
+  <button data-rent="40000+">40,000元以上</button>
+  <input type="number" id="rent-min" placeholder=""> -
+  <input type="number" id="rent-max" placeholder=""> 元
+</div>
+
+<div class="filter-row">
+  <label>格局</label>
+  <button data-layout="不限">不限</button>
+  <button data-layout="1">1房</button>
+  <button data-layout="2">2房</button>
+  <button data-layout="3">3房</button>
+  <button data-layout="4">4房</button>
+  <button data-layout="5+">5房以上</button>
+</div>
+
+<div class="filter-row">
+  <label>坪數</label>
+  <button data-size="不限">不限</button>
+  <button data-size="0-20">20坪以下</button>
+  <button data-size="20-30">20-30坪</button>
+  <button data-size="30-40">30-40坪</button>
+  <button data-size="40-50">40-50坪</button>
+  <button data-size="50-60">50-60坪</button>
+  <button data-size="60+">60坪以上</button>
+  <input type="number" id="size-min" placeholder=""> -
+  <input type="number" id="size-max" placeholder=""> 坪
+</div>
+
+<div class="filter-row">
+  <label>更多</label>
+  <button data-more="屋齡">屋齡</button>
+  <button data-more="單價">單價</button>
+  <button data-more="朝向">朝向</button>
+</div>
+
+ <!-- 本月熱門 -->
+
+ <section class="popular" id="popular">
+  <h2 class="section-title">本月熱門</h2>
+
+
+  <div class="category-group">
+    <h3 class="category-title"></h3>
+    <div class="scroll-wrapper">
+      <button class="scroll-btn left" data-target="suite"><i class="fas fa-chevron-left"></i></button>
+      <div class="scroll-container" id="suite">
+        <div class="box"><img src="../image/room1.jpg"><h4>明星科大兩房</h4><p>新豐鄉 / 新庄子</p><h3>$8500</h3></div>
+        <div class="box"><img src="../image/room2.jpg"><h4>市中心套房</h4><p>竹北市 / 興隆路</p><h3>$15000</h3></div>
+        <div class="box"><img src="../image/room3.jpg"><h4>景觀宅</h4><p>竹北市 / 中華路</p><h3>$26000</h3></div>
+        <div class="box"><img src="../image/room4.jpg"><h4>溫馨小宅</h4><p>湖口鄉 / 華興街</p><h3>$13000</h3></div>
+        <div class="box"><img src="../image/room5.jpg"><h4>親子宅</h4><p>湖口鄉 / 博愛路</p><h3>$16000</h3></div>
+        <div class="box"><img src="../image/room6.jpg"><h4>郊區別墅</h4><p>竹北市 / 隘口一路</p><h3>$26000</h3></div>
+        <div class="box"><img src="../image/room7.jpg"><h4>偏鄉透天</h4><p>竹東鄉 / 華興路</p><h3>$15000</h3></div>
+      </div>
+      <button class="scroll-btn right" data-target="suite"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+
+  <script>
+  const buttons = document.querySelectorAll('.scroll-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const containerId = btn.getAttribute('data-target');
+      const container = document.getElementById(containerId);
+      const direction = btn.classList.contains('left') ? -300 : 300;
+      container.scrollBy({ left: direction, behavior: 'smooth' });
+    });
+  });
+</script>
+
+
+ 
+
+<script>
+  const scrollBox = document.getElementById('scrollBox');
+  const scrollAmount = 300; // 每次滑動的距離
+
+  document.querySelector('.scroll-btn.left').addEventListener('click', () => {
+    scrollBox.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  document.querySelector('.scroll-btn.right').addEventListener('click', () => {
+    scrollBox.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+</script>
+
+<!--租屋資訊-->
+
+<link rel="stylesheet" href="room.css">
+
+ <section class="popular" id="popular">
+  <h2 class="section-title">租屋資訊</h2>
+
+
+ <!-- 房源 1 -->
+<div class="container">
+  <div class="content-wrapper">
+    <div class="header">
+      <img src="../image/room1.jpg" alt="租屋照片">
+    </div>
+    <div class="content">
+      <h2>竹北高鐵生醫3分鐘走路 | 竹科匯質感綠建材二房平車</h2>
+      <div class="tags">
+        <span class="tag">屋主自租</span>
+        <span class="tag">優選好屋</span>
+        <span class="tag">新上架</span>
+        <span class="tag">拎包入住</span>
+        <span class="tag">有電梯</span>
+        <span class="tag">可開伙</span>
+      </div>
+      <ul class="info-list">
+        <li><strong>地點：</strong>新竹縣竹北市光明六路東二段</li>
+        <li><strong>距離：</strong>距特殊教育學校（嘉豐六路口）約 233 公尺</li>
+        <li><strong>格局：</strong>2房2廳</li>
+        <li><strong>坪數：</strong>17 坪</li>
+        <li><strong>樓層：</strong>10 樓 / 共 14 樓</li>
+        <li><strong>建材特色：</strong>竹科匯綠建材</li>
+      </ul>
+      <div class="price">28,000 元 / 月</div>
+      <div class="foot">屋主：李太太｜3 小時內更新｜昨日 80 人瀏覽</div>
+    </div>
+  </div>
+</div>
+
+<!-- 房源 2 -->
+<div class="container">
+  <div class="content-wrapper">
+    <div class="header">
+      <img src="../image/room2.jpg" alt="租屋照片">
+    </div>
+    <div class="content">
+      <h2>近新竹車站｜採光三面窗溫馨三房含車位</h2>
+      <div class="tags">
+        <span class="tag">電梯大樓</span>
+        <span class="tag">可養寵物</span>
+        <span class="tag">邊間</span>
+        <span class="tag">高樓層</span>
+      </div>
+      <ul class="info-list">
+        <li><strong>地點：</strong>新竹市東區中華路一段</li>
+        <li><strong>距離：</strong>新竹火車站步行 6 分鐘</li>
+        <li><strong>格局：</strong>3房2廳2衛</li>
+        <li><strong>坪數：</strong>25 坪</li>
+        <li><strong>樓層：</strong>12 樓 / 共 15 樓</li>
+        <li><strong>建材特色：</strong>三面採光 / 附裝潢</li>
+      </ul>
+      <div class="price">32,000 元 / 月</div>
+      <div class="foot">屋主：王先生｜1 天內更新｜昨日 45 人瀏覽</div>
+    </div>
+  </div>
+</div>
+
+<!-- 房源 3 -->
+<div class="container">
+  <div class="content-wrapper">
+    <div class="header">
+      <img src="../image/room3.jpg" alt="租屋照片">
+    </div>
+    <div class="content">
+      <h2>近清大｜全新裝潢電梯大樓一房一廳</h2>
+      <div class="tags">
+        <span class="tag">近學區</span>
+        <span class="tag">可開伙</span>
+        <span class="tag">拎包入住</span>
+      </div>
+      <ul class="info-list">
+        <li><strong>地點：</strong>新竹市光復路二段</li>
+        <li><strong>距離：</strong>清大東門 200 公尺</li>
+        <li><strong>格局：</strong>1房1廳1衛</li>
+        <li><strong>坪數：</strong>11 坪</li>
+        <li><strong>樓層：</strong>6 樓 / 共 12 樓</li>
+        <li><strong>建材特色：</strong>耐震結構 / 安全門禁</li>
+      </ul>
+      <div class="price">18,500 元 / 月</div>
+      <div class="foot">屋主：林小姐｜剛剛更新｜昨日 60 人瀏覽</div>
+    </div>
+  </div>
+</div>
+
+<!-- 房源 4 -->
+<div class="container">
+  <div class="content-wrapper">
+    <div class="header">
+      <img src="../image/room4.jpg" alt="租屋照片">
+    </div>
+    <div class="content">
+      <h2>竹北文興路大三房｜附平面車位</h2>
+      <div class="tags">
+        <span class="tag">可養貓</span>
+        <span class="tag">有電梯</span>
+        <span class="tag">免仲介費</span>
+        <span class="tag">含家具</span>
+      </div>
+      <ul class="info-list">
+        <li><strong>地點：</strong>新竹縣竹北市文興路一段</li>
+        <li><strong>距離：</strong>近遠百、家樂福</li>
+        <li><strong>格局：</strong>3房2廳2衛</li>
+        <li><strong>坪數：</strong>30 坪</li>
+        <li><strong>樓層：</strong>8 樓 / 共 14 樓</li>
+        <li><strong>建材特色：</strong>高級磁磚、木地板</li>
+      </ul>
+      <div class="price">36,000 元 / 月</div>
+      <div class="foot">屋主：張先生｜今日更新｜昨日 72 人瀏覽</div>
+    </div>
+  </div>
+</div>
+
+<!-- 房源 5 -->
+<div class="container">
+  <div class="content-wrapper">
+    <div class="header">
+      <img src="../image/room5.jpg" alt="租屋照片">
+    </div>
+    <div class="content">
+      <h2>新埔捷運旁｜全新整修兩房附陽台</h2>
+      <div class="tags">
+        <span class="tag">捷運宅</span>
+        <span class="tag">有陽台</span>
+        <span class="tag">獨立電表</span>
+      </div>
+      <ul class="info-list">
+        <li><strong>地點：</strong>新北市板橋區文化路</li>
+        <li><strong>距離：</strong>步行至新埔站約 5 分鐘</li>
+        <li><strong>格局：</strong>2房1廳1衛</li>
+        <li><strong>坪數：</strong>18 坪</li>
+        <li><strong>樓層：</strong>3 樓 / 共 5 樓</li>
+        <li><strong>建材特色：</strong>全室翻新 / 獨立門戶</li>
+      </ul>
+      <div class="price">22,000 元 / 月</div>
+      <div class="foot">屋主：賴小姐｜今日更新｜昨日 31 人瀏覽</div>
+    </div>
+  </div>
+</div>
+
+<!-- 房源 6 -->
+<div class="container">
+  <div class="content-wrapper">
+    <div class="header">
+      <img src="../image/room6.jpg" alt="租屋照片">
+    </div>
+    <div class="content">
+      <h2>新竹市政府旁｜樓中樓挑高美宅出租</h2>
+      <div class="tags">
+        <span class="tag">樓中樓</span>
+        <span class="tag">近市政府</span>
+        <span class="tag">附家具</span>
+        <span class="tag">網路免費</span>
+      </div>
+      <ul class="info-list">
+        <li><strong>地點：</strong>新竹市中央路</li>
+        <li><strong>距離：</strong>步行至巨城約 7 分鐘</li>
+        <li><strong>格局：</strong>1房1廳1衛（挑高）</li>
+        <li><strong>坪數：</strong>15 坪</li>
+        <li><strong>樓層：</strong>11 樓 / 共 15 樓</li>
+        <li><strong>建材特色：</strong>挑高設計 / 雙層窗</li>
+      </ul>
+      <div class="price">20,000 元 / 月</div>
+      <div class="foot">屋主：黃先生｜2 小時前更新｜昨日 50 人瀏覽</div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!--頁尾 -->
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

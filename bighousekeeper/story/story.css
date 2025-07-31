@@ -1,0 +1,579 @@
+/* 第一區 header */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(255, 255, 255);
+  }
+  
+  header {
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background:#f7cc0d;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  header img {
+    width: 100px;
+    height: 60px;
+    margin-bottom: -5px;
+    filter: saturate(8);
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: rgb(9, 152, 152);
+    text-decoration: none;
+  }
+  
+  header .logo span {
+    margin-left: 10px;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .navbar a {
+    font-size: 18px;
+    color: rgb(9, 152, 152);
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    font-weight: bold;
+    color: rgb(0, 157, 50);
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  #menu-bar {
+    font-size: 25px;
+    cursor: pointer;
+    color: rgb(9, 152, 152);
+    border: 1px solid rgb(9, 152, 152);
+    border-radius: 5px;
+    padding: 8px;
+    display: none;
+  }
+  
+  /* 搜尋欄 */
+  .search-box {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+  
+  .search-box input {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+  
+  .search-box button {
+    padding: 6px 10px;
+    background-color: rgb(9, 152, 152);
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  /* RWD */
+  @media (max-width: 768px) {
+    #menu-bar {
+      display: block;
+    }
+  
+    .navbar {
+      display: none;
+      flex-direction: column;
+      background: white;
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+  
+    .navbar.active {
+      display: flex;
+    }
+  
+    .search-box {
+      margin-top: 10px;
+      width: 100%;
+    }
+  
+    .search-box input {
+      width: 100%;
+    }
+  }
+
+
+                                        /*第二區*/
+
+/* ----------- 大圖樣式：品牌故事封面用 ----------- */
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 100px auto 20px;
+}
+
+.contact-pic {
+  width: 1000px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: none;
+  box-shadow: none;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* 響應式：品牌封面圖樣式 */
+@media (max-width: 600px) {
+  .contact-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-pic {
+    width: 80%;
+  }
+}
+
+
+/* ----------- 小圖左側排列版樣式 ----------- */
+/* 大圖樣式 */
+.contact-box {
+  max-width: 800px;
+  margin: 100px auto 20px;
+  text-align: center;
+}
+
+.contact-pic-large {
+  width: 100%;
+  max-width: 1000px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 小圖＋文字容器 */
+.box-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+/* 左側圖片，右側文字 */
+.box-container.left-image {
+  flex-direction: row;
+}
+
+/* 右側圖片，左側文字 */
+.box-container.right-image {
+  flex-direction: row-reverse;
+}
+
+/* 小圖 */
+.contact-pic-small {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* 文字部分 */
+.contact-text {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* 響應式手機版 */
+@media (max-width: 600px) {
+  .box-container {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .contact-pic-small {
+    width: 80%;
+    height: auto;
+  }
+}
+
+
+
+
+/*--  時間軸  --*/
+
+h3 {
+  text-align: center;
+  font-size: 2.5rem;  /* 放大字型 */
+  font-weight: 700;   /* 加粗字型 */
+  color: #2e7d32;    /* 可選，換成深綠色或你喜歡的色彩 */
+  margin-bottom: 30px; /* 下方間距，讓標題跟時間軸有距離 */
+}
+
+ .timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px 0;
+}
+
+/* 中間的軸線 */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 50px; /* 從哪裡開始畫線 */
+  height: 900px; /* 總長度（你可依實際內容長度調整） */
+  left: 50%;
+  width: 4px;
+  background: #f7cc0d;
+  transform: translateX(-50%);
+}
+
+
+/* 單一事件項目 */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+/* 時間軸點 */
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background: #f7cc0d;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 100%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: 0%;
+  transform: translateX(-50%);
+}
+
+/* 內容框 */
+.timeline-content {
+  background: #fff6ff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #f7cc0d;
+  display: inline-block;
+  max-width: 90%;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+   color: rgb(9, 152, 152);
+  font-size: 20px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 高亮字體顏色 */
+.highlight {
+   color: rgb(9, 152, 152);
+  font-weight: bold;
+}
+
+.highlight-orange {
+  color: #e67300;
+  font-weight: bold;
+}
+
+/* 年份置中 */
+.timeline-year {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(9, 152, 152);
+  margin-bottom: 40px;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-dot {
+    left: 8px !important;
+    transform: translateX(0);
+  }
+
+  .timeline-content {
+    max-width: 100%;
+  }
+}
+
+
+
+
+/*頁尾*/
+
+/* 頁尾 */ 
+
+/* 頁腳樣式 */
+.footer {
+  background-color: #f7cc0d; /* 淺灰色背景 */
+  padding: 20px 10px; /* 頁腳的內邊距，保持上下的間距 */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* 讓區塊在垂直方向排列 */
+  align-items: center; /* 水平居中對齊 */
+  justify-content: center; /* 垂直居中對齊 */
+  margin-top: 40px; /* 增加頁腳與內容區塊的間距 */
+  position: relative; /* 頁腳位置為相對定位 */
+  width: 100%;
+  min-height: 200px; /* 設置最小高度，防止頁腳過小 */
+}
+
+/* 頁腳內容區塊 */
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  gap: 30px; /* 調整區塊間的間距，這裡增加為30px */
+  padding: 0 10px;
+  width: 100%; /* 確保內容區塊有足夠的寬度 */
+  max-width: 1200px; /* 設定最大寬度，避免過寬 */
+  justify-content: space-between; /* 使用space-between讓區塊之間的間隔更加分散 */
+}
+
+/* 公司資訊區塊 */
+.company-info h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px; /* 縮小標題與下一段之間的距離 */
+}
+
+.company-info h3:hover {
+  color: #495057;         /* 滑鼠懸停時變成較深的灰色 */
+  text-decoration: underline;  /* 加上底線 */
+  cursor: pointer;        /* 滑鼠變成指標，讓使用者知道可以互動 */
+}
+
+
+/* 社交媒體區塊 */
+.social a {
+  margin: 5px 10px; /* 縮小社交圖示之間的間距 */
+  text-decoration: none;
+}
+
+.social i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.social a:hover i {
+  transform: scale(1.1); /* 當鼠標懸停時，圖示稍微放大 */
+}
+
+/* 服務項目區塊 */
+.services h4 {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 5px;
+  transition: color 0.3s ease; /* 平滑過渡效果 */
+}
+
+.services h4:hover {
+  color: #343a40;              /* 滑鼠懸停時變深色 */
+  text-decoration: underline; /* 加上底線 */
+  cursor: pointer;            /* 滑鼠變成指標 */
+}
+
+
+/* 最新消息區塊 */
+.news h4 {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 5px;
+  transition: color 0.3s ease; /* 加上過渡效果讓變化更順暢 */
+}
+
+.news h4:hover {
+  color: #000000;              /* 滑鼠懸停時變深色 */
+  text-decoration: underline; /* 加底線 */
+  cursor: pointer;            /* 指標變成手型 */
+}
+
+
+/* 縮小行間距 */
+h2, h3, h4 {
+  line-height: 1.2; /* 縮小行間距 */
+}
+
+
+
+/* 屏幕*
+
+
+
+/* 叮選務件 */
+
+.fixed-widget {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 999;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+
+  display: flex;
+  flex-direction: column;     /* 垂直排列 */
+  align-items: center;        /* 水平置中 */
+  text-align: center;
+}
+
+.contact-image {
+  display: block;        /* 圖片改成區塊元素 */
+  margin: 0 auto;        /* 左右自動置中 */
+  width: 250px;
+  height: auto;
+  margin-left: 50px; /* 數值調整往右距離 */
+  border-radius: 0;
+  background: transparent;
+}
+
+.contact-title {
+  font-size: 24px;
+  color: #ffff06;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  animation: fadeIn 1s ease;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-links a i {
+  font-size: 36px;
+  color: #444;
+  transition: transform 0.3s ease;
+}
+
+.social-links a i:hover {
+  transform: scale(1.2);
+  color: #007BFF;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #333;}
+
+
+.footer-section-title {
+  font-size: 22px;       /* 標題字體大小 */
+  font-weight: 700;      /* 粗體 */
+  color: #2e7d32;        /* 深綠色字體 */
+  margin: 0 0 15px 0;    /* 底部間距 */
+  line-height: 1.3;      /* 行高 */
+  text-align: left;      /* 左對齊，如果要置中改成 center */
+  user-select: none;     /* 防止誤選文字，可刪除 */
+}
+
+
+
+
+
+
+
